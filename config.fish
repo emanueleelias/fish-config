@@ -21,7 +21,8 @@ alias vlist "vtex list"
 alias vdeploy 'bash /home/eliasdanielemanuele/.config/fish/deployvtex.sh'
 alias vinit 'bash /home/eliasdanielemanuele/.config/fish/vtexinit.sh'
 alias c 'cd ..'
-alias cat 'bat'
+alias cat bat
+alias nm-remove 'find . -name "node_modules" -type d -prune -exec rm -rf {} +'
 
 #vtex switch
 function gp
@@ -45,7 +46,7 @@ function vuse
 end
 
 function ls
-   if test -n "$argv"
+    if test -n "$argv"
         exa --icons $argv
     else
         exa --icons
